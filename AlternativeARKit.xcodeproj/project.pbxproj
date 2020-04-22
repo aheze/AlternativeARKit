@@ -13,6 +13,11 @@
 		49F7BCA5244FC4EA000DA868 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49F7BCA3244FC4EA000DA868 /* Main.storyboard */; };
 		49F7BCA7244FC4F9000DA868 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49F7BCA6244FC4F9000DA868 /* Assets.xcassets */; };
 		49F7BCAA244FC4F9000DA868 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49F7BCA8244FC4F9000DA868 /* LaunchScreen.storyboard */; };
+		49F7BCB3244FC53C000DA868 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F7BCB2244FC53C000DA868 /* CameraView.swift */; };
+		49F7BCB5244FC6E9000DA868 /* ConfigureCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F7BCB4244FC6E9000DA868 /* ConfigureCamera.swift */; };
+		49F7BCB8244FC8C8000DA868 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F7BCB7244FC8C8000DA868 /* Utilities.swift */; };
+		49F7BCBA244FC919000DA868 /* VisionOCR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F7BCB9244FC919000DA868 /* VisionOCR.swift */; };
+		49F7BCBC244FCE4A000DA868 /* ARFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F7BCBB244FCE4A000DA868 /* ARFunctions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		49F7BCA6244FC4F9000DA868 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49F7BCA9244FC4F9000DA868 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49F7BCAB244FC4F9000DA868 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49F7BCB2244FC53C000DA868 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		49F7BCB4244FC6E9000DA868 /* ConfigureCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigureCamera.swift; sourceTree = "<group>"; };
+		49F7BCB7244FC8C8000DA868 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		49F7BCB9244FC919000DA868 /* VisionOCR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionOCR.swift; sourceTree = "<group>"; };
+		49F7BCBB244FCE4A000DA868 /* ARFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARFunctions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +66,8 @@
 		49F7BC9C244FC4EA000DA868 /* AlternativeARKit */ = {
 			isa = PBXGroup;
 			children = (
+				49F7BCB6244FC89D000DA868 /* Vision */,
+				49F7BCB1244FC530000DA868 /* CameraView */,
 				49F7BC9D244FC4EA000DA868 /* AppDelegate.swift */,
 				49F7BC9F244FC4EA000DA868 /* SceneDelegate.swift */,
 				49F7BCA1244FC4EA000DA868 /* ViewController.swift */,
@@ -65,6 +77,25 @@
 				49F7BCAB244FC4F9000DA868 /* Info.plist */,
 			);
 			path = AlternativeARKit;
+			sourceTree = "<group>";
+		};
+		49F7BCB1244FC530000DA868 /* CameraView */ = {
+			isa = PBXGroup;
+			children = (
+				49F7BCB2244FC53C000DA868 /* CameraView.swift */,
+				49F7BCB4244FC6E9000DA868 /* ConfigureCamera.swift */,
+			);
+			path = CameraView;
+			sourceTree = "<group>";
+		};
+		49F7BCB6244FC89D000DA868 /* Vision */ = {
+			isa = PBXGroup;
+			children = (
+				49F7BCB7244FC8C8000DA868 /* Utilities.swift */,
+				49F7BCB9244FC919000DA868 /* VisionOCR.swift */,
+				49F7BCBB244FCE4A000DA868 /* ARFunctions.swift */,
+			);
+			path = Vision;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +169,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49F7BCBC244FCE4A000DA868 /* ARFunctions.swift in Sources */,
+				49F7BCB8244FC8C8000DA868 /* Utilities.swift in Sources */,
 				49F7BCA2244FC4EA000DA868 /* ViewController.swift in Sources */,
+				49F7BCB5244FC6E9000DA868 /* ConfigureCamera.swift in Sources */,
 				49F7BC9E244FC4EA000DA868 /* AppDelegate.swift in Sources */,
 				49F7BCA0244FC4EA000DA868 /* SceneDelegate.swift in Sources */,
+				49F7BCB3244FC53C000DA868 /* CameraView.swift in Sources */,
+				49F7BCBA244FC919000DA868 /* VisionOCR.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +323,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YA533DMD5J;
 				INFOPLIST_FILE = AlternativeARKit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,6 +342,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YA533DMD5J;
 				INFOPLIST_FILE = AlternativeARKit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
