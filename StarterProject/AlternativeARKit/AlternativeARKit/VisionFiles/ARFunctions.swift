@@ -9,7 +9,7 @@
 import UIKit
 
 extension ViewController {
-    func placeHighlights(atTheseLocations: [CGRect]) {
+    func placeHighlights(atTheseLocations rectangles: [CGRect]) {
         /// Todo: Step 2... place the rectangle "in real life"
     }
 }
