@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AlternativeARKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RW4-lk-gzd" customClass="CameraView" customModule="AlternativeARKit" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lFv-O0-Ipz">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hMa-nA-Kfv">
+                                <rect key="frame" x="107" y="767" width="200" height="80"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="AMK-fq-bVP">
+                                    <rect key="frame" x="0.0" y="0.0" width="200" height="80"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Looking for this word: ARKit" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T5t-UN-Mqj">
+                                            <rect key="frame" x="16" y="19.5" width="168" height="41"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="T5t-UN-Mqj" secondAttribute="trailing" constant="16" id="43o-BU-Va3"/>
+                                        <constraint firstItem="T5t-UN-Mqj" firstAttribute="leading" secondItem="AMK-fq-bVP" secondAttribute="leading" constant="16" id="TFJ-Us-6YI"/>
+                                        <constraint firstItem="T5t-UN-Mqj" firstAttribute="centerY" secondItem="AMK-fq-bVP" secondAttribute="centerY" id="whd-z1-qIF"/>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="6rr-R5-WPU"/>
+                                    <constraint firstAttribute="height" constant="80" id="xcr-ga-eBI"/>
+                                </constraints>
+                                <blurEffect style="systemUltraThinMaterialDark"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="lFv-O0-Ipz" secondAttribute="bottom" id="8Jk-kq-tx8"/>
+                            <constraint firstItem="RW4-lk-gzd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Gxf-38-58z"/>
+                            <constraint firstItem="RW4-lk-gzd" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Lio-Yk-0jU"/>
+                            <constraint firstItem="hMa-nA-Kfv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MFK-KI-sjF"/>
+                            <constraint firstItem="lFv-O0-Ipz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Sbz-dn-ZA7"/>
+                            <constraint firstItem="lFv-O0-Ipz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Sg5-Tm-t1v"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lFv-O0-Ipz" secondAttribute="trailing" id="bcq-VK-Cuz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hMa-nA-Kfv" secondAttribute="bottom" constant="15" id="c58-xx-JKO"/>
+                            <constraint firstAttribute="bottom" secondItem="RW4-lk-gzd" secondAttribute="bottom" id="g3z-Lw-4ZX"/>
+                            <constraint firstItem="RW4-lk-gzd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="iLX-NC-Nl6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="blurLabel" destination="T5t-UN-Mqj" id="vCN-c0-tri"/>
+                        <outlet property="blurView" destination="hMa-nA-Kfv" id="qV4-4x-ND3"/>
+                        <outlet property="cameraView" destination="RW4-lk-gzd" id="8aC-n6-2si"/>
+                        <outlet property="drawingView" destination="lFv-O0-Ipz" id="8J6-KZ-8o0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+</document>
