@@ -10,7 +10,6 @@ import UIKit
 import AVFoundation
 
 extension ViewController {
-    
     func isAuthorized() -> Bool {
         let authorizationStatus = AVCaptureDevice.authorizationStatus(for: AVMediaType.video)
         switch authorizationStatus {
@@ -39,8 +38,6 @@ extension ViewController {
         } else {
             print("Missing Camera.")
             return nil
-//            fatalError("Missing expected back camera device.")
-            //return nil
         }
     }
     

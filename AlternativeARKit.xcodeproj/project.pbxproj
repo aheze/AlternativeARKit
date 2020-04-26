@@ -21,7 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		49F7BC9A244FC4EA000DA868 /* AlternativeARKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlternativeARKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		49F7BC9A244FC4EA000DA868 /* Alt-AR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Alt-AR.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49F7BC9D244FC4EA000DA868 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49F7BC9F244FC4EA000DA868 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		49F7BCA1244FC4EA000DA868 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -34,6 +34,7 @@
 		49F7BCB7244FC8C8000DA868 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		49F7BCB9244FC919000DA868 /* VisionOCR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionOCR.swift; sourceTree = "<group>"; };
 		49F7BCBB244FCE4A000DA868 /* ARFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARFunctions.swift; sourceTree = "<group>"; };
+		49F7BCBE24510868000DA868 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +59,7 @@
 		49F7BC9B244FC4EA000DA868 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				49F7BC9A244FC4EA000DA868 /* AlternativeARKit.app */,
+				49F7BC9A244FC4EA000DA868 /* Alt-AR.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -66,15 +67,15 @@
 		49F7BC9C244FC4EA000DA868 /* AlternativeARKit */ = {
 			isa = PBXGroup;
 			children = (
-				49F7BCB6244FC89D000DA868 /* Vision */,
-				49F7BCB1244FC530000DA868 /* CameraView */,
-				49F7BC9D244FC4EA000DA868 /* AppDelegate.swift */,
-				49F7BC9F244FC4EA000DA868 /* SceneDelegate.swift */,
 				49F7BCA1244FC4EA000DA868 /* ViewController.swift */,
+				49F7BCB6244FC89D000DA868 /* VisionFiles */,
+				49F7BCB1244FC530000DA868 /* CameraView */,
+				49F7BCBD245107DD000DA868 /* AppDelegateSceneDelegate */,
 				49F7BCA3244FC4EA000DA868 /* Main.storyboard */,
 				49F7BCA6244FC4F9000DA868 /* Assets.xcassets */,
 				49F7BCA8244FC4F9000DA868 /* LaunchScreen.storyboard */,
 				49F7BCAB244FC4F9000DA868 /* Info.plist */,
+				49F7BCBE24510868000DA868 /* LICENSE.md */,
 			);
 			path = AlternativeARKit;
 			sourceTree = "<group>";
@@ -88,14 +89,23 @@
 			path = CameraView;
 			sourceTree = "<group>";
 		};
-		49F7BCB6244FC89D000DA868 /* Vision */ = {
+		49F7BCB6244FC89D000DA868 /* VisionFiles */ = {
 			isa = PBXGroup;
 			children = (
-				49F7BCB7244FC8C8000DA868 /* Utilities.swift */,
 				49F7BCB9244FC919000DA868 /* VisionOCR.swift */,
 				49F7BCBB244FCE4A000DA868 /* ARFunctions.swift */,
+				49F7BCB7244FC8C8000DA868 /* Utilities.swift */,
 			);
-			path = Vision;
+			path = VisionFiles;
+			sourceTree = "<group>";
+		};
+		49F7BCBD245107DD000DA868 /* AppDelegateSceneDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				49F7BC9D244FC4EA000DA868 /* AppDelegate.swift */,
+				49F7BC9F244FC4EA000DA868 /* SceneDelegate.swift */,
+			);
+			path = AppDelegateSceneDelegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -115,7 +125,7 @@
 			);
 			name = AlternativeARKit;
 			productName = AlternativeARKit;
-			productReference = 49F7BC9A244FC4EA000DA868 /* AlternativeARKit.app */;
+			productReference = 49F7BC9A244FC4EA000DA868 /* Alt-AR.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -329,7 +339,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ktkpiano.AlternativeARKit;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Alt-AR";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -348,7 +358,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ktkpiano.AlternativeARKit;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Alt-AR";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
