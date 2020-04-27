@@ -1,6 +1,8 @@
 # AlternativeARKit
 **This is the source code for my Medium article on a custom ARKit alternative!**
 
+![][image]
+
 Note that my "Alternative" is by no means a replacement for the highly polished, extremely accurate, outstandingly realistic ARKit. It doesn't come close at all, even, and it is highly limited in terms of use case as well as required preconditions.
 
 However, my "Alternative" is a very fast, efficient, not-memory-hogging program that serves as the backbone of my app.
@@ -16,3 +18,5 @@ Here's some ideas:
 - Live translator like Google Translator
 - QR Code overlay (place a rectangle on detected QR Codes)
 - Custom anchors (Use CoreML to look for images, then place a rectangle on top of it (like `ARImageTrackingConfiguration` except 10x faster, but however a lot less accurate...)
+
+[image]: https://raw.githubusercontent.com/zjohnzheng/AlternativeARKit/master/images/ARProjection.png "Logo Title Text 2"
