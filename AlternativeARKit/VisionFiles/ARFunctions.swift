@@ -95,6 +95,7 @@ extension ViewController {
             for oldView in previousHighlightComponents {
                 
                 /// we're going to loop over previousHighlightComponents to check if any view is NEAR the the current rectangle that we're going to place
+                /// check the centers of the rectangles instead of the origin (Vision doesn't always return exact values -- sometimes the width, height, and origin are off. The center acts as a more stable point, kind of like an average.
                 let currentCompPoint = CGPoint(x: rectangle.midX, y: rectangle.midY)
                 let oldCompPoint = oldView.center
                 
