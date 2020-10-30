@@ -85,7 +85,7 @@ extension ViewController {
         for rectangle in rectangles {
             
             /// We're going to add a variable called lowestDist.
-            /// Later, we'll check if this is under 64.
+            /// Later, we'll check if this is under 225 (15*15).
             var lowestDist = CGFloat(10000)
             
             /// This is a dictionary mapping distances to UIViews.
@@ -111,8 +111,8 @@ extension ViewController {
                 }
             }
             
-            /// maximumNearDistanceSquared is a magic number, but it works pretty fine in our case (square root of 64 is 8)
-            /// so if there is a previous view that is 8 points away, we'll reuse it and slide it into the new position
+            /// maximumNearDistanceSquared is a magic number, but it works pretty fine in our case (square root of 225 is 15)
+            /// so if there is a previous view that is 15 points away, we'll reuse it and slide it into the new position
             if lowestDist <= maximumNearDistanceSquared {
                 
                 guard let oldView = distToView[lowestDist] else {
