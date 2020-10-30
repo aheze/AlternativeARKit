@@ -98,7 +98,7 @@ extension ViewController {
                 let currentCompPoint = CGPoint(x: rectangle.midX, y: rectangle.midY)
                 let oldCompPoint = oldView.center
                 
-                /// because normal Distance Formula(includes square rooting) is time consuming, relativeDistance doesn't square it at the end
+                /// because normal Distance Formula (includes square rooting) is time consuming, relativeDistance doesn't square it at the end
                 /// this is perfectly fine for out case because we're only comparing distances and we don't actually need an accurate distance.
                 let distanceBetweenPoints = relativeDistance(currentCompPoint, oldCompPoint)
                 
