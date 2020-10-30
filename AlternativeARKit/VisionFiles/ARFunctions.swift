@@ -24,8 +24,8 @@ extension ViewController {
             let rollValue = attitude.roll.radiansToDegrees
             let pitchValue = attitude.pitch.radiansToDegrees
             
-            /// This is a magic number, but for simplicity, we won't do any advanced trigonometry -- also, 10 works pretty well
-            let conversion = Double(10)
+            /// This is a magic number, but for simplicity, we won't do any advanced trigonometry -- also, 3 works pretty well
+            let conversion = Double(3)
             
             /// Here, we figure out how much the values changed by comparing against the previous values (motionX and motionY)
             let differenceInX = (rollValue - motionX) * conversion
@@ -73,7 +73,7 @@ extension ViewController {
         
         /// this is the maximum distance that we'll consider "near"
         /// if any old highlight is less than this, we'll animate this to the new position
-        let maximumNearDistance = CGFloat(8)
+        let maximumNearDistance = CGFloat(15)
         
         /// We're going to be efficient and instead of using the Distance Formula, we're going to use a modified version of it
         /// the modified Distance Formula is the exact same, except we're not square rooting at the end
@@ -85,7 +85,7 @@ extension ViewController {
         for rectangle in rectangles {
             
             /// We're going to add a variable called lowestDist.
-            /// Later, we'll check if this is under 64.
+            /// Later, we'll check if this is under 225 (15*15).
             var lowestDist = CGFloat(10000)
             
             /// This is a dictionary mapping distances to UIViews.
@@ -95,8 +95,8 @@ extension ViewController {
             for oldView in previousHighlightComponents {
                 
                 /// we're going to loop over previousHighlightComponents to check if any view is NEAR the the current rectangle that we're going to place
-                let currentCompPoint = CGPoint(x: rectangle.origin.x, y: rectangle.origin.y)
-                let oldCompPoint = CGPoint(x: oldView.frame.origin.x, y: oldView.frame.origin.y)
+                let currentCompPoint = CGPoint(x: rectangle.midX, y: rectangle.midY)
+                let oldCompPoint = oldView.center
                 
                 /// because normal Distance Formula(includes square rooting) is time consuming, relativeDistance doesn't square it at the end
                 /// this is perfectly fine for out case because we're only comparing distances and we don't actually need an accurate distance.
@@ -111,8 +111,8 @@ extension ViewController {
                 }
             }
             
-            /// maximumNearDistanceSquared is a magic number, but it works pretty fine in our case (square root of 64 is 8)
-            /// so if there is a previous view that is 8 points away, we'll reuse it and slide it into the new position
+            /// maximumNearDistanceSquared is a magic number, but it works pretty fine in our case (square root of 225 is 15)
+            /// so if there is a previous view that is 15 points away, we'll reuse it and slide it into the new position
             if lowestDist <= maximumNearDistanceSquared {
                 
                 guard let oldView = distToView[lowestDist] else {
