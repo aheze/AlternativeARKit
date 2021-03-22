@@ -1,5 +1,5 @@
 # AlternativeARKit
-**This is the source code for my Medium article on a custom ARKit alternative!**
+**This is the source code for my [Medium article](https://betterprogramming.pub/a-custom-alternative-to-arkit-c07961a38d2a?source=friends_link&sk=ed0c89157da6520e60179f07cb40f911) on a custom ARKit alternative!**
 
 ![][image]
 
@@ -10,7 +10,7 @@ However, my "Alternative" is a very fast, efficient, not-memory-hogging program 
 ## Potential Use Cases
 Because this custom alternative requires a frequently-updating location provider (for example, Vision giving us the coordinates of detected text every second), this project is highly limited in use case.
 
-The most obvious use case is a Text-Finding app (like my app [Find](https://apps.apple.com/app/find-command-f-for-camera/id1506500202)).
+The most obvious use case is a Text-Finding app (like my app [Find](https://www.getfind.app/)).
 
 But the code is very simple, and you can definitely adjust it to your needs!
 Here's some ideas:
